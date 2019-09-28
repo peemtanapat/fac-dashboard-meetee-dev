@@ -8,7 +8,6 @@
 // @ is an alias to /src
 import FacilityDashboard from "@/components/FacilityDashboard.vue";
 
-
 export default {
   name: 'dashboard',
   components: {
