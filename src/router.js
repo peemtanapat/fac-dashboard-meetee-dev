@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Dashboard from './views/Dashboard.vue'
+import Controller from './views/Controller.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -29,6 +30,11 @@ export default new Router({
       path: '/fac-dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/controller',
+      name: 'controller',
+      component: Controller
     }
   ]
 })
