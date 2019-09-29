@@ -5,14 +5,16 @@ import store from './store'
 import server from './server'
 import VueNativeSock from 'vue-native-websocket'
 // import VueWebsocket from "vue-websocket";
-
+const URL = [
+  "ws://localhost:9001", //0
+  "ws://18.139.12.132:9001" //1
+];
 Vue.config.productionTip = false
 
 // Vue.use(VueWebsocket, "ws://localhost:9001");
-Vue.use(VueNativeSock, 'ws://18.139.12.132:9001', {
-// Vue.use(VueNativeSock, 'ws://localhost:9001', {
-  store: store,
-  // format: 'json'
+Vue.use(VueNativeSock, URL[0], {
+  // Vue.use(VueNativeSock, 'ws://localhost:9001', {
+  store: store
 })
 
 new Vue({

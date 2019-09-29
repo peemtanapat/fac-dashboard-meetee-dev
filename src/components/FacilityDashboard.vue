@@ -53,25 +53,19 @@
   </div>
 </template>
 
-
 <script src="/socket.io/socket.io.js"></script>
 <script>
 require("dotenv").config();
 import env from "../../env";
 import axios from "axios";
 import io from "socket.io-client";
-// import WebSocket from "vue-native-websocket";
-import Moment from "moment";
 import { async } from "q";
 import VueGridLayout from "vue-grid-layout";
 const URL = [
   "http://localhost:9000", //0
   "http://18.139.12.132:9000", //1
-  "ws://localhost:9001", //2
-  "ws://18.139.12.132:9001" //3
 ];
 const socketioURL = URL[0];
-const websocketURL = URL[3];
 const getUnavailableFacListAPI = `${socketioURL}/facility/all/status`;
 
 var co = require("../co-working-space.json");
@@ -89,12 +83,10 @@ export default {
     return {
       name: "facDashboard",
       socket: io(socketioURL),
-      // ws: new WebSocket(websocketURL),
       loading: true,
       errored: false,
       message: "success",
       facilityList: [],
-
       layout: [],
       columns: 33,
       rows: 30,
@@ -112,10 +104,6 @@ export default {
     // await this.assignDataToGridLayout();
   },
   mounted() {
-    // this.$socket.on("message", response => {
-    //   console.log("55555: " + response);
-    // });
-
     this.$options.sockets.onmessage = data => console.log(data.data);
     this.socket.on("reservation_trigger", response => {
       console.log("socket.io: " + response);
