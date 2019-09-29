@@ -71,7 +71,7 @@ const URL = [
   "ws://18.139.12.132:9001" //3
 ];
 const socketioURL = URL[0];
-const websocketURL = URL[2];
+const websocketURL = URL[3];
 const getUnavailableFacListAPI = `${socketioURL}/facility/all/status`;
 
 var co = require("../co-working-space.json");
