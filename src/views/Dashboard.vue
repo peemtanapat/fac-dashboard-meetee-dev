@@ -1,6 +1,6 @@
 <template>
   <div id="facDashboard">
-    <FacilityDashboard pageHeader="Facility Dashboard DEMO" />
+    <FacilityDashboard pageHeader="SEAT MAP DEMO" />
   </div>
 </template>
 

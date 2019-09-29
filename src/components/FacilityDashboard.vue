@@ -15,13 +15,14 @@
         </div>
       </div>-->
     </section>
-    <button class="button is-primary" @click="sendDataToWebsocket(message)" style="width:100px">Send</button>
     <button class="button is-primary" @click="getFacListWithStatus(today)" style="width:100px">today</button>
+    &nbsp; 
     <button
       class="button is-danger"
       @click="getFacListWithStatus(tomorrow)"
       style="width:100px"
     >tomorrow</button>
+    <hr />
     <grid-layout
       :layout.sync="layout"
       :col-num="columns"
