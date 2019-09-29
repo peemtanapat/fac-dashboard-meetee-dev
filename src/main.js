@@ -9,7 +9,8 @@ import VueNativeSock from 'vue-native-websocket'
 Vue.config.productionTip = false
 
 // Vue.use(VueWebsocket, "ws://localhost:9001");
-Vue.use(VueNativeSock, 'ws://localhost:9001', {
+Vue.use(VueNativeSock, 'ws://18.139.12.132:9001', {
+// Vue.use(VueNativeSock, 'ws://localhost:9001', {
   store: store,
   // format: 'json'
 })
