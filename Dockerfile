@@ -7,7 +7,7 @@ RUN npm install
 RUN npm audit fix
 RUN npm install -g @vue/cli
 COPY . /usr/src/app
-RUN npm run serve
+RUN npm run build
 
 FROM nginx
 COPY  --from=ui-builder /usr/src/app/dist /usr/share/nginx/html
