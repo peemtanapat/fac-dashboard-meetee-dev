@@ -8,12 +8,6 @@
       <div v-if="loading">
         <h5>Loading...</h5>
       </div>
-      <!-- <div v-else>
-        <div v-for="fac in facilityList" v-bind:key="fac.facId">
-          <button :class="statusColor(fac)">{{ fac.facId }} {{ fac.facCode}}</button>
-          <span>&nbsp;</span>
-        </div>
-      </div>-->
     </section>
     <button class="button is-primary" @click="getFacListWithStatus(today)" style="width:100px">today</button>
     &nbsp; 
@@ -66,8 +60,9 @@ const URL = [
   "http://localhost:9000", //0
   "http://18.139.12.132:9000", //1
 ];
-const socketioURL = URL[0];
+const socketioURL = URL[1];
 const getUnavailableFacListAPI = `${socketioURL}/facility/all/status`;
+console.log(socketioURL)
 
 var co = require("../co-working-space.json");
 
@@ -91,8 +86,8 @@ export default {
       layout: [],
       columns: 33,
       rows: 30,
-      today: "2019-11-10",
-      tomorrow: "2019-11-11"
+      today: "2019-09-30",
+      tomorrow: "2019-10-01"
     };
   },
   async created() {

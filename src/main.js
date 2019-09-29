@@ -12,7 +12,7 @@ const URL = [
 Vue.config.productionTip = false
 
 // Vue.use(VueWebsocket, "ws://localhost:9001");
-Vue.use(VueNativeSock, URL[0], {
+Vue.use(VueNativeSock, URL[1], {
   // Vue.use(VueNativeSock, 'ws://localhost:9001', {
   store: store
 })
