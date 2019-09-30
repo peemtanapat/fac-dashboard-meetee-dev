@@ -148,9 +148,9 @@ export default {
       this.facilityList = [];
       return axios
         .post(getUnavailableFacListAPI, {
-          startTime: "08:00:00",
+          startTime: "11:00:00",
           startDate: date,
-          endTime: "09:00:00",
+          endTime: "13:00:00",
           endDate: date
         })
         .then(response => {
